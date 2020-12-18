@@ -1,0 +1,47 @@
+[
+  {
+    "id": "carrio",
+    "activated": true,
+    "oauth_callback_url": "http://carrio.ci",
+    "type": 3,
+    "secret": "carrio",
+    "info": {
+      "application_id": "carrio",
+      "created_by": "ome",
+      "label": "Carrio",
+      "logo_url": "https://ome.com/apps/res/images/carrio.png",
+      "description": "Social network for carrying package",
+      "website": "https://ome.com/apps/carrio/presentation"
+    }
+  },
+  {
+    "id": "files",
+    "activated": true,
+    "oauth_callback_url": "http://files.win.ci:8080",
+    "type": 3,
+    "secret": "files",
+    "info": {
+      "application_id": "files",
+      "created_by": "ome",
+      "label": "Accounts application",
+      "logo_url": "https://ome.com/apps/res/images/files.png",
+      "description": "Files server application",
+      "website": "https://win.ci/apps/files/presentation.html"
+    }
+  },
+  {
+    "id": "firex",
+    "activated": true,
+    "oauth_callback_url": "http://firex.win.ci:8080",
+    "type": 3,
+    "secret": "firex",
+    "info": {
+      "application_id": "firex",
+      "created_by": "ome",
+      "label": "Fire x",
+      "logo_url": "https://ome.com/apps/res/images/fx.png",
+      "description": "Real time MySQL database",
+      "website": "https://ome.com/apps/firex/presentation.html"
+    }
+  }
+]
