@@ -35,7 +35,7 @@ var (
 var application *app.App
 
 func init() {
-	application = app.New(Vendor, "Ome",
+	application = app.New(Vendor, "AppRegistry",
 		app.WithVersion(Version),
 		app.WithRunCommandFunc(start),
 	)

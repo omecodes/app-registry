@@ -47,7 +47,7 @@ func (s *Server) serveInfo(w http.ResponseWriter, r *http.Request) {
 	}
 	info.CSR = fmt.Sprintf("grpc://%s", address)
 
-	dataInfo, err := registry.FirstOfType(ome.ServiceType_Data)
+	dataInfo, err := registry.FirstOfType(ome.DataServiceType)
 	if err != nil && !errors.IsNotFound(err) {
 		log.Error("could not get data service", log.Err(err))
 		w.WriteHeader(http.StatusInternalServerError)
@@ -63,7 +63,7 @@ func (s *Server) serveInfo(w http.ResponseWriter, r *http.Request) {
 		}
 	}
 
-	accountsInfo, err := registry.FirstOfType(ome.ServiceType_Authentication)
+	accountsInfo, err := registry.FirstOfType(ome.AuthenticationServiceType)
 	if err != nil && !errors.IsNotFound(err) {
 		log.Error("could not get account service", log.Err(err))
 		w.WriteHeader(http.StatusInternalServerError)
@@ -80,7 +80,7 @@ func (s *Server) serveInfo(w http.ResponseWriter, r *http.Request) {
 		info.Oauth2.SignatureKey = node.Meta[ome.MetaTokenVerifyingKey]
 	}
 
-	jwtStoreInfo, err := registry.FirstOfType(ome.ServiceType_TokenStore)
+	jwtStoreInfo, err := registry.FirstOfType(ome.TokenStoreServiceType)
 	if err != nil && !errors.IsNotFound(err) {
 		log.Error("could not get token store service", log.Err(err))
 		w.WriteHeader(http.StatusInternalServerError)

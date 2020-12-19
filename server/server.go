@@ -194,7 +194,7 @@ func (s *Server) Start() error {
 		RegisterHandlerFunc: func(gs *grpc.Server) {
 			ome.RegisterApplicationsServer(gs, s.gRPCHandler)
 		},
-		ServiceType: ome.ServiceType_AppStore,
+		ServiceType: ome.AppRegistryServiceType,
 		Port:        s.config.GRPCPort,
 		Node: &ome.Node{
 			Id:       gRPCServiceName,
